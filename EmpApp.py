@@ -20,19 +20,19 @@ db_conn = connections.Connection(
 output = {}
 table = 'employee'
 
-
+# Home Page
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    return render_template('AddEmp.html')
+    return render_template('index.html')
 
-
+# About Us
 @app.route("/about", methods=['POST'])
 def about():
     return render_template('www.intellipaat.com')
 
-
+# Add Employee
 @app.route("/addemp", methods=['POST'])
-def AddEmp():
+def addEmp():
     emp_id = request.form['emp_id']
     first_name = request.form['first_name']
     last_name = request.form['last_name']
@@ -80,6 +80,38 @@ def AddEmp():
     print("all modification done...")
     return render_template('AddEmpOutput.html', name=emp_name)
 
+# Add Employee Done
+@app.route("/addemp/",methods=['GET','POST'])
+def addEmpDone():
+    return render_template('index.html')
+
+# Get Employee Information
+@app.route("/fetchdata",methods=['GET','POST'])
+def getEmp():
+     emp_id = request.form['emp_id']
+
+     select_stmt = "SELECT * FROM employee WHERE emp_id = %(emp_id)s"
+     cursor = db_conn.cursor()
+        
+     try:
+         cursor.execute(select_stmt, { 'emp_id': int(emp_id) })
+         for result in cursor:
+            print(result)
+        
+
+     except Exception as e:
+        return str(e)
+        
+     finally:
+        cursor.close()
+
+     return render_template('GetEmpOutput.html')
+
+#Get Employee Done
+@app.route("/fetchdata/")
+def getEmpDone():
+    
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)

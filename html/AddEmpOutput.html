@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Employee Registration Feedback</title>
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../css/5grid/init.js?use=mobile,desktop"></script>
+    <script src="../js/jquery.formerize-1.1.js"></script>
+    <script src="../js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="../css/5grid/core.css">
+        <link rel="stylesheet" href="../css/5grid/core-desktop.css">
+        <link rel="stylesheet" href="../css/5grid/core-1200px.css">
+        <link rel="stylesheet" href="../css/5grid/core-noscript.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/style-desktop.css">
+        <link rel="stylesheet" href="../css/noscript.css">
+    </noscript>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie8.css">
+    <![endif]-->
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Employee Information</h1>
+        </header>
+
+        <span class="byline">Following Employee has been added to the database</span>
+        <span class="byline">{{ name }}</span>
+
+        <form action="/addemp/" autocomplete="on" method="get" enctype="multipart/form-data">
+
+            <div class="5grid">
+
+                <div class="row">
+                    <div class="12u">
+                        <input type="submit" class="button" value="Return to Homepage">
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+        <div id="footer">
+
+            <ul class="links">
+                <li>&copy; LoveLee Friends</li>
+                <li>Class : RSF3 S1 G2</li>
+                <li>Subject : Cloud Computing</li>
+                <li>Lecturer : Low Choon Keat</li>
+                <li>Images : <a href="http://fotogrph.com/">fotogrph</a></li>
+                <li>Design : <a href="http://html5up.net/">HTML5 Up!</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>HR Software</title>
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../css/5grid/init.js?use=mobile,desktop"></script>
+    <script src="../js/jquery.formerize-1.1.js"></script>
+    <script src="../js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="../css/5grid/core.css">
+        <link rel="stylesheet" href="../css/5grid/core-desktop.css">
+        <link rel="stylesheet" href="../css/5grid/core-1200px.css">
+        <link rel="stylesheet" href="../css/5grid/core-noscript.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/style-desktop.css">
+        <link rel="stylesheet" href="../css/noscript.css">
+    </noscript>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie8.css">
+    <![endif]-->
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <nav id="nav">
+            <a href="#home" class="icon icon-user active"><span>Homepage</span></a>
+            <a href="#about" class="icon icon-folder"><span>About Us</span></a>
+            <a href="#register" class="icon icon-mail"><span>Registration</span></a>
+            <a href="#search" class="icon icon-info"><span>Employee</span></a>
+        </nav>
+
+        <div id="main">
+
+            <article id="home" class="panel">
+
+                <header>
+                    <h1>HR Software</h1>
+                    <span class="byline">a digital solution <br>
+                        for managing and optimizing <br>
+                        the daily human resources tasks and <br>
+                        overall HR goals of an organization. </span>
+                </header>
+
+                <a href="#about" class="jumplink pic">
+                    <span class="jumplink arrow icon icon-right"><span>Next Employee</span></span>
+                    <img src="../images/me.jpg" alt="">
+                </a>
+
+            </article>
+
+            <article id="about" class="panel">
+
+                <header>
+                    <h2>About Us</h2>
+                </header>
+
+                <p> Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit. Vestibulum ante ipsum
+                    primis
+                    in faucibus orci luctus et ultrices posuere cubilia luctus elit eget interdum. </p>
+
+                <section class="5grid is-gallery">
+
+                    <div class="row">
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/1.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/2.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/3.jpg" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/4.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/5.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/6.jpg" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/7.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/8.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/9.jpg" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/10.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/11.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/12.jpg" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/13.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/14.jpg" alt=""></a>
+                        </div>
+                        <div class="4u"> <a href="#" class="image image-full"><img src="../images/15.jpg" alt=""></a>
+                        </div>
+                    </div>
+
+                </section>
+
+            </article>
+
+            <article id="register" class="panel">
+
+                <header>
+                    <h2>Register New Employee</h2>
+                </header>
+
+                <form action="/addemp" autocomplete="on" method="post" enctype="multipart/form-data">
+
+                    <div class="5grid">
+
+                        <div class="row">
+                            <div class="6u">
+                                <input type="text" class="text" name="first_name" placeholder="First Name">
+                            </div>
+                            <div class="6u">
+                                <input type="text" class="text" name="last_name" placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="12u">
+                                <input type="number" class="text" name="emp_id" placeholder="Employee ID">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="12u">
+                                <input type="text" class="text" name="pri_skill" placeholder="Primary Skill">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="12u">
+                                <input type="text" class="text" name="location" placeholder="Location">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="12u">
+                                <input type="file" name="emp_image_file" placeholder="Profile Image">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="12u">
+                                <input type="submit" class="button" value="Update Database">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </article>
+
+            <article id="search" class="panel">
+
+                <header>
+                    <h2>Get Employee Information</h2>
+                </header>
+
+                <form action="/fetchdata" autocomplete="on" method="post" enctype="multipart/form-data">
+
+                    <div class="5grid">
+
+                        <div class="row">
+                            <div class="12u">
+                                <input type="number" class="text" name="emp_id" placeholder="Enter Employee ID">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="12u">
+                                <input type="submit" class="button" value="Fetch Employee Information">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </article>
+
+        </div>
+
+        <div id="footer">
+
+            <ul class="links">
+                <li>&copy; LoveLee Friends</li>
+                <li>Class : RSF3 S1 G2</li>
+                <li>Subject : Cloud Computing</li>
+                <li>Lecturer : Low Choon Keat</li>
+                <li>Images : <a href="http://fotogrph.com/">fotogrph</a></li>
+                <li>Design : <a href="http://html5up.net/">HTML5 Up!</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
