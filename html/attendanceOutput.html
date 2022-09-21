@@ -31,42 +31,28 @@
             <article class="panel">
                 
                 <header>
-                    <h1>Employee Information</h1>
+                    <h1>Employee Attendance</h1>
                 </header>
-                
-                {{ image_url }}
-                
-                <form action="/fetchdata/" autocomplete="on" method="get" enctype="multipart/form-data">
+                                
+                <form action="/attendance/" autocomplete="on" method="get" enctype="multipart/form-data">
                 
                     <div class="5grid">
                 
                         <div class="row">
                             <div class="12u">
-                                Employee ID:<br> {{ output[0] }} <br><br>
+                                Check In Time:<br> {{ LoginTime }} <br><br>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="12u">
-                                First Name:<br> {{ output[1] }} <br><br>
+                                Check Out Time:<br> {{ Checkout }} <br><br>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="12u">
-                                Last Name:<br> {{ output[2] }} <br><br>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="12u">
-                                Primary Interest:<br> {{ output[3] }} <br><br>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="12u">
-                                Location:<br> {{ output[4] }} <br><br>
+                                Total Working Hours:<br> {{ TotalWorkingHours }} <br><br>
                             </div>
                         </div>
                 

@@ -27,7 +27,7 @@
 
         <nav id="nav">
             <a href="#home" class="icon icon-user active"><span>Homepage</span></a>
-            <a href="#about" class="icon icon-folder"><span>About Us</span></a>
+            <a href="#attendance" class="icon icon-folder"><span>Attendance</span></a>
             <a href="#register" class="icon icon-mail"><span>Registration</span></a>
             <a href="#search" class="icon icon-info"><span>Employee</span></a>
         </nav>
@@ -37,78 +37,56 @@
             <article id="home" class="panel">
 
                 <header>
-                    <h1>HR Software</h1>
-                    <span class="byline">a digital solution <br>
+                    <h1 style="padding-bottom: 100px;">HR Software</h1>
+                    <span class="byline" style="margin-top: -75px;">a digital solution <br>
                         for managing and optimizing <br>
-                        the daily human resources tasks and <br>
-                        overall HR goals of an organization. </span>
+                        the daily human resources tasks <br>
+                        and overall HR goals <br>
+                        of an organization. </span>
                 </header>
 
-                <a href="#about" class="jumplink pic">
-                    <span class="jumplink arrow icon icon-right"><span>Next Employee</span></span>
-                    <img src="https://leeyanjie-employee.s3.amazonaws.com/images/me.jpg" alt="">
+                <a href="about.html" class="jumplink pic">
+                    <img src="https://leeyanjie-employee.s3.amazonaws.com/images/home.jpg" alt="" width="450px"/>
                 </a>
 
             </article>
 
-            <article id="about" class="panel">
+            <article id="attendance" class="panel">
 
                 <header>
-                    <h2>About Us</h2>
+                    <h2>Take Employee's Attendance</h2>
                 </header>
+                <form autocomplete="on" method="post" enctype="multipart/form-data">
 
-                <p> Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit. Vestibulum ante ipsum
-                    primis
-                    in faucibus orci luctus et ultrices posuere cubilia luctus elit eget interdum. </p>
+                    <div class="5grid">
 
-                <section class="5grid is-gallery">
+                        <div class="row">
+                            <div class="12u">
+                                {{ date.strftime("%A, %d %B, %Y at %H:%M") }}
+                            </div>
+                        </div>
 
-                    <div class="row">
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/1.jpg" alt=""></a>
+                        <div class="row">
+                            <div class="12u">
+                                <input type="number" class="text" name="emp_id" placeholder="Enter Employee ID">
+                            </div>
                         </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/2.jpg" alt=""></a>
+                        
+                        <div class="row">
+                            <div class="12u">
+                                <input formaction="/attendance/checkIn" type="submit" class="button" value="Check In">
+                            </div>
                         </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/3.jpg" alt=""></a>
+
+                        <div class="row">
+                            <div class="12u">
+                                <input formaction="/attendance/checkOut" type="submit" class="button" value="Check Out">
+                            </div>
                         </div>
+
                     </div>
 
-                    <div class="row">
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/4.jpg" alt=""></a>
-                        </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/5.jpg" alt=""></a>
-                        </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/6.jpg" alt=""></a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/7.jpg" alt=""></a>
-                        </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/8.jpg" alt=""></a>
-                        </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/9.jpg" alt=""></a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/10.jpg" alt=""></a>
-                        </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/11.jpg" alt=""></a>
-                        </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/12.jpg" alt=""></a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/13.jpg" alt=""></a>
-                        </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/14.jpg" alt=""></a>
-                        </div>
-                        <div class="4u"> <a href="#" class="image image-full"><img src="https://leeyanjie-employee.s3.amazonaws.com/images/15.jpg" alt=""></a>
-                        </div>
-                    </div>
-
-                </section>
+                </form>
 
             </article>
 
