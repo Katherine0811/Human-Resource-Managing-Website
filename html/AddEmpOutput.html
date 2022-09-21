@@ -25,41 +25,52 @@
 
 <body>
     <div id="wrapper">
-        <header>
-            <h1>Employee Information</h1>
-        </header>
+        
+        <div id="main">
 
-        <span class="byline">Following Employee has been added to the database</span>
-        <span class="byline">{{ name }}</span>
+            <article class="panel">
 
-        <form action="/addemp/" autocomplete="on" method="get" enctype="multipart/form-data">
-
-            <div class="5grid">
-
-                <div class="row">
-                    <div class="12u">
-                        <input type="submit" class="button" value="Return to Homepage">
+                <header>
+                    <h2>Employee Information</h2>
+                </header>
+                
+                <p>
+                    Following Employee has been added to the database <br> {{ name }}
+                </p>
+                
+                <form action="/addemp/" autocomplete="on" method="get" enctype="multipart/form-data">
+                
+                    <div class="5grid">
+                
+                        <div class="row">
+                            <div class="12u">
+                                <input type="submit" class="button" value="Return to Homepage">
+                            </div>
+                        </div>
+                
                     </div>
-                </div>
+                
+                </form>
 
-            </div>
-
-        </form>
+            </article>
+            
+        </div>
 
         <div id="footer">
-
+        
             <ul class="links">
                 <li>&copy; LoveLee Friends</li>
-                <li>Class : RSF3 S1 G2</li>
+                <li>RSF3 S1 G2</li>
                 <li>Subject : Cloud Computing</li>
                 <li>Lecturer : Low Choon Keat</li>
                 <li>Images : <a href="http://fotogrph.com/">fotogrph</a></li>
                 <li>Design : <a href="http://html5up.net/">HTML5 Up!</a></li>
             </ul>
-
+        
         </div>
 
     </div>
+    
 </body>
 
 </html>
