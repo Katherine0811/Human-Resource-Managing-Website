@@ -1,3 +1,4 @@
+from unittest import result
 from flask import Flask, render_template, request
 from datetime import datetime
 from pymysql import connections
@@ -25,7 +26,7 @@ table = 'employee'
 # Home Page
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    return render_template('index.html', date=datetime.now())
+    return render_template('index.html')
 
 
 # About Us
@@ -114,7 +115,7 @@ def checkIn():
     finally:
         cursor.close()
 
-    return render_template('attendanceOutput.html', date=datetime.now(), LoginTime=formatted_login)
+    return render_template('attendanceOutput.html', LoginTime=formatted_login)
 
 # Employee Attendance Checkout
 @app.route("/attendance/checkOut",methods=['GET','POST'])
@@ -154,7 +155,7 @@ def checkOut():
     finally:
         cursor.close()
         
-    return render_template("AttendanceOutput.html",date=datetime.now(), Checkout = formatted_checkout, 
+    return render_template("AttendanceOutput.html", Checkout = formatted_checkout, 
      LoginTime=formatted_login[0], TotalWorkingHours=Total_Working_Hours)
 
 # Get Employee Done
@@ -175,7 +176,7 @@ def getEmp():
      try:
          cursor.execute(select_stmt, { 'emp_id': int(emp_id) })
          for result in cursor:
-            output.append(result)
+            print(result)
         
 
      except Exception as e:
@@ -190,7 +191,7 @@ def getEmp():
 @app.route("/fetchdata/",methods=['GET','POST'])
 def getEmpDone():
     
-    return render_template('index.html', result=output)
+    return render_template('index.html', result=result)
 
 
 if __name__ == '__main__':
