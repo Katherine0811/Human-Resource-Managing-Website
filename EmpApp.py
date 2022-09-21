@@ -123,7 +123,7 @@ def checkOut():
 
     emp_id = request.form['emp_id']
     select_stmt = "SELECT check_in FROM employee WHERE emp_id = %(emp_id)s"
-    insert_statement="INSERT INTO attendance VALUES (%s,%s,%s,%s)"
+    insert_sql = "INSERT INTO attendance (emp_id, LoginTime, Checkout, TotalWorkingHours) VALUES (%s,%s,%s,%s)"
 
     cursor = db_conn.cursor()
         
@@ -143,7 +143,7 @@ def checkOut():
         print(Total_Working_Hours)
          
         try:
-            cursor.execute(insert_statement,(emp_id, formatted_login[0], formatted_checkout, Total_Working_Hours))
+            cursor.execute(insert_sql, (emp_id, formatted_login[0], formatted_checkout, Total_Working_Hours))
             db_conn.commit()            
             
         except Exception as e:
