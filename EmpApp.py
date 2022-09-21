@@ -107,8 +107,8 @@ def getEmp():
 
      return render_template('GetEmpOutput.html')
 
-#Get Employee Done
-@app.route("/fetchdata/")
+# Get Employee Done
+@app.route("/fetchdata/",methods=['GET','POST'])
 def getEmpDone():
     
     return render_template('index.html')
