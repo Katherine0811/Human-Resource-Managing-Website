@@ -26,13 +26,13 @@ table = 'employee'
 # Home Page
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    return render_template('index.html')
+    return render_template('index.html', date=datetime.now())
 
 
 # About Us
 @app.route("/about", methods=['POST'])
 def about():
-    return render_template('www.intellipaat.com')
+    return render_template('www.intellipaat.com', date=datetime.now())
 
 
 # Add Employee
@@ -84,12 +84,12 @@ def addEmp():
         cursor.close()
 
     print("all modification done...")
-    return render_template('AddEmpOutput.html', name=emp_name)
+    return render_template('AddEmpOutput.html', name=emp_name, date=datetime.now())
 
 # Add Employee Done
 @app.route("/addemp/",methods=['GET','POST'])
 def addEmpDone():
-    return render_template('index.html')
+    return render_template('index.html', date=datetime.now())
 
 
 # Employee Attendance Check In
@@ -115,7 +115,7 @@ def checkIn():
     finally:
         cursor.close()
 
-    return render_template('attendanceOutput.html', LoginTime=formatted_login)
+    return render_template('attendanceOutput.html', LoginTime=formatted_login, date=datetime.now())
 
 # Employee Attendance Checkout
 @app.route("/attendance/checkOut",methods=['GET','POST'])
@@ -156,13 +156,13 @@ def checkOut():
         cursor.close()
         
     return render_template("AttendanceOutput.html", Checkout = formatted_checkout, 
-     LoginTime=formatted_login[0], TotalWorkingHours=Total_Working_Hours)
+     LoginTime=formatted_login[0], TotalWorkingHours=Total_Working_Hours, date=datetime.now())
 
 # Get Employee Done
 @app.route("/attendance/",methods=['GET','POST'])
 def atdEmpDone():
     
-    return render_template('index.html')
+    return render_template('index.html', date=datetime.now())
 
 
 # Get Employee Information
@@ -185,13 +185,13 @@ def getEmp():
      finally:
         cursor.close()
 
-     return render_template('GetEmpOutput.html')
+     return render_template('GetEmpOutput.html', date=datetime.now())
 
 # Get Employee Done
 @app.route("/fetchdata/",methods=['GET','POST'])
 def getEmpDone():
     
-    return render_template('index.html', result=result)
+    return render_template('index.html', result=result, date=datetime.now())
 
 
 if __name__ == '__main__':
