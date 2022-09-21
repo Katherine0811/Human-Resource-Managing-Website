@@ -185,13 +185,13 @@ def getEmp():
      finally:
         cursor.close()
 
-     return render_template('GetEmpOutput.html', date=datetime.now())
+     return render_template('GetEmpOutput.html', result=result, date=datetime.now())
 
 # Get Employee Done
 @app.route("/fetchdata/",methods=['GET','POST'])
 def getEmpDone():
     
-    return render_template('index.html', result=result, date=datetime.now())
+    return render_template('index.html', date=datetime.now())
 
 
 if __name__ == '__main__':
