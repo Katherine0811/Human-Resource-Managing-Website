@@ -155,7 +155,7 @@ def checkOut():
     finally:
         cursor.close()
         
-    return render_template("attendanceOutput.html", checkout = formatted_checkout, 
+    return render_template("attendanceOutput.html", emp_id=emp_id, checkout=formatted_checkout, 
      loginTime=formatted_login[0], totalWorkingHours=Total_Working_Hours, date=datetime.now())
 
 # Get Employee Done
