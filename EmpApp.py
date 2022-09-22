@@ -155,8 +155,8 @@ def checkOut():
     finally:
         cursor.close()
         
-    return render_template("attendanceOutput.html", Checkout = formatted_checkout, 
-     LoginTime=formatted_login[0], TotalWorkingHours=Total_Working_Hours, date=datetime.now())
+    return render_template("attendanceOutput.html", checkout = formatted_checkout, 
+     loginTime=formatted_login[0], totalWorkingHours=Total_Working_Hours, date=datetime.now())
 
 # Get Employee Done
 @app.route("/attendance/",methods=['GET','POST'])
