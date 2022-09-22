@@ -32,7 +32,7 @@ def home():
 # About Us
 @app.route("/about", methods=['POST'])
 def about():
-    return render_template('www.intellipaat.com', date=datetime.now())
+    return render_template('about.html', date=datetime.now())
 
 
 # Add Employee
@@ -115,7 +115,7 @@ def checkIn():
     finally:
         cursor.close()
 
-    return render_template('attendanceOutput.html', emp_id, loginTime=formatted_login, date=datetime.now())
+    return render_template('attendanceOutput.html', emp_id=emp_id, loginTime=formatted_login, date=datetime.now())
 
 # Employee Attendance Checkout
 @app.route("/attendance/checkOut",methods=['GET','POST'])
