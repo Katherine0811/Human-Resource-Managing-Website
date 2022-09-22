@@ -115,7 +115,7 @@ def checkIn():
     finally:
         cursor.close()
 
-    return render_template('attendanceOutput.html', LoginTime=formatted_login, date=datetime.now())
+    return render_template('attendanceOutput.html', emp_id, loginTime=formatted_login, date=datetime.now())
 
 # Employee Attendance Checkout
 @app.route("/attendance/checkOut",methods=['GET','POST'])
@@ -123,7 +123,7 @@ def checkOut():
 
     emp_id = request.form['emp_id']
     select_stmt = "SELECT check_in FROM employee WHERE emp_id = %(emp_id)s"
-    insert_sql = "INSERT INTO attendance (emp_id, LoginTime, Checkout, TotalWorkingHours) VALUES (%s,%s,%s,%s)"
+    insert_sql = "INSERT INTO attendance (emp_id, loginTime, checkout, totalWorkingHours) VALUES (%s,%s,%s,%s)"
 
     cursor = db_conn.cursor()
         
