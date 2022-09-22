@@ -84,7 +84,7 @@ def addEmp():
         cursor.close()
 
     print("all modification done...")
-    return render_template('AddEmpOutput.html', name=emp_name, date=datetime.now())
+    return render_template('addEmpOutput.html', name=emp_name, date=datetime.now())
 
 # Add Employee Done
 @app.route("/addemp/",methods=['GET','POST'])
@@ -155,7 +155,7 @@ def checkOut():
     finally:
         cursor.close()
         
-    return render_template("AttendanceOutput.html", Checkout = formatted_checkout, 
+    return render_template("attendanceOutput.html", Checkout = formatted_checkout, 
      LoginTime=formatted_login[0], TotalWorkingHours=Total_Working_Hours, date=datetime.now())
 
 # Get Employee Done
@@ -185,7 +185,7 @@ def getEmp():
      finally:
         cursor.close()
 
-     return render_template('GetEmpOutput.html', result=result, date=datetime.now())
+     return render_template('getEmpOutput.html', result=result, date=datetime.now())
 
 # Get Employee Done
 @app.route("/fetchdata/",methods=['GET','POST'])
